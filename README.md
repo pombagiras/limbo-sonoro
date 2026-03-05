@@ -1,7 +1,7 @@
 <p align="center">
   <img src="https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/Al%C3%AA%20(3)%20(3)%20(1).png" alt="Alê / Alexia Melusine" width="320" style="border-radius: 50%; border: 4px solid #8b0000;">
   <br><br>
-  <h1 align="center">Almas de</h1>
+  <h1 align="center">Alexia Melusine</h1>
   <h3 align="center">🌹 Nas sombras do abismo, eu canto. Nas encruzilhadas do código, eu manifesto. 🌹</h3>
 </p>
 
