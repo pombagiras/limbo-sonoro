@@ -1,55 +1,42 @@
- <!-- CABEÇALHO -->
-        <header>
-            <div class="profile-wrapper">
-                <img src="https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/Al%C3%AA%20(3)%20(3)%20(1).png" alt="Alexia Melusine" class="profile-photo">
-            </div>
-            
-            <h1>Alexia Melusine</h1>
-            <p class="subtitle">Desenvolvedora | Narradora do Abismo</p>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/Al%C3%AA%20(3)%20(3)%20(1).png" alt="Alê / Alexia Melusine" width="320" style="border-radius: 50%; border: 4px solid #8b0000;">
+  <br><br>
+  <h1 align="center">Almas de</h1>
+  <h3 align="center">🌹 Nas sombras do abismo, eu canto. Nas encruzilhadas do código, eu manifesto. 🌹</h3>
+</p>
 
-            <p class="bio">
-                Mergulhando no código assim como mergulha nas memórias. Meu trabalho conecta a técnica do desenvolvimento à visceralidade da arte autobiográfica.
-            </p>
-        </header>
+<p align="center">
+  <strong>Anatomia do Abismo</strong> — onde o silêncio é ensurdecedor e as memórias sangram som.<br>
+  Limbo Sonoro • Pombagiras • Transcender pelo código e pela palavra.
+</p>
 
-        <!-- PROJETOS -->
-        <section class="projects">
-            
-            <!-- Pombagiras -->
-            <a href="https://github.com/pombagiras" target="_blank" class="project-card card-purple">
-                <h3>Pombagiras</h3>
-                <p>O núcleo da técnica e da magia. Repositório principal de desenvolvimento e experimentação.</p>
-                <span class="arrow">↗</span>
-            </a>
+---
 
-            <!-- Orgulho Trans -->
-            <a href="https://github.com/Orgulho-Trans" target="_blank" class="project-card card-pink">
-                <h3>Orgulho Trans</h3>
-                <p>Memória e resistência. Um espaço dedicado à preservação de histórias e lutas da comunidade.</p>
-                <span class="arrow">↗</span>
-            </a>
+### 🌑 Projetos & Portais Sagrados
 
-            <!-- Alexia Luz de Ferro -->
-            <a href="https://github.com/alexialuzdeferro" target="_blank" class="project-card card-iron">
-                <h3>Luz de Ferro</h3>
-                <p>A identidade que forja o código. Explorações sobre identidade e composição digital sólida.</p>
-                <span class="arrow">↗</span>
-            </a>
+- **[pombagiras](https://github.com/pombagiras)**  
+  Grimórios digitais, feitiços em linhas de código, oferendas viscerais às Rainhas da Encruzilhada.
 
-        </section>
+- **[Orgulho-Trans](https://github.com/Orgulho-Trans)**  
+  Espaço de resistência, visibilidade e código como ferramenta de luta e existência trans não-binária.
 
-        <!-- CITAÇÃO -->
-        <div class="quote-section">
-            <blockquote>
-                “Porque alguns abismos não se superam — apenas se narram.”
-            </blockquote>
-        </div>
+- **[alexialuzdeferroda](https://github.com/alexialuzdeferroda)**  
+  Portal de luz e fogo — Alexia Rosa de Fogo, onde espiritualidade afro-brasileira encontra tecnologia e identidade.
 
-    </div>
+---
 
-    <footer>
-        <p>LIMBO SONORO &copy; 2024</p>
-    </footer>
+### 🎧 Limbo Sonoro – Anatomia do Abismo
 
-</body>
-</html>
+> “Porque alguns abismos não se superam — apenas se narram.”
+
+Podcast visceral e autobiográfico. Textos de décadas atrás ressuscitados pelo som.  
+Aviso: contém temas sensíveis (morte, colapso, sofrimento psíquico). Ouça com autocuidado.
+
+👉 [Acesse o Limbo Sonoro](https://pombagiras.github.io/limbo-sonoro/)
+
+---
+
+<p align="center">
+  <i>ALMA & SANGUE • Cada commit é uma oferenda. Cada erro, uma lição do abismo.</i><br><br>
+  🌹 Alê / Alexia Melusine 🌹
+</p>
