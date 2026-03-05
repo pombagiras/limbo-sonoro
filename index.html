@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Limbo Sonoro — Anatomia do Abismo. Um podcast visceral conduzido por Alexia Melusine sobre memórias e abismos psíquicos.">
+    <title>Limbo Sonoro | Anatomia do Abismo</title>
+    
+    <!-- Fontes do Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- Variáveis e Reset --- */
+        :root {
+            --bg-color: #050505;
+            --text-primary: #e0e0e0;
+            --text-secondary: #a0a0a0;
+            --accent-color: #8a2be2; /* Roxo profundo */
+            --accent-glow: rgba(138, 43, 226, 0.3);
+            --warning-border: #5c1818;
+            --warning-bg: rgba(60, 10, 10, 0.4);
+            --font-display: 'Cormorant Garamond', serif;
+            --font-body: 'Lato', sans-serif;
+            --spacing-unit: 2rem;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            font-family: var(--font-body);
+            line-height: 1.6;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Efeito de Ruído (Grain) para atmosfera analógica */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+            pointer-events: none;
+            z-index: 9999;
+        }
+
+        /* --- Tipografia --- */
+        h1, h2, h3 {
+            font-family: var(--font-display);
+            font-weight: 400;
+            letter-spacing: 0.02em;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+        }
+
+        /* --- Layout & Seções --- */
+        section {
+            padding: 4rem 1.5rem;
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            opacity: 0;
+            animation: fadeIn 2s ease-out forwards;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            background: linear-gradient(to bottom, #fff, #888);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+        }
+
+        .hero .subtitle {
+            font-size: 1.2rem;
+            font-family: var(--font-display);
+            font-style: italic;
+            color: var(--text-secondary);
+            margin-bottom: 3rem;
+            max-width: 600px;
+        }
+
+        .hero .slogan {
+            font-size: 1.1rem;
+            border-top: 1px solid var(--text-secondary);
+            border-bottom: 1px solid var(--text-secondary);
+            padding: 1rem 2rem;
+            margin-top: 2rem;
+            color: var(--text-primary);
+            opacity: 0.8;
+            letter-spacing: 0.05em;
+        }
+
+        /* Indicador de Scroll */
+        .scroll-indicator {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 2s infinite;
+            opacity: 0.5;
+        }
+
+        /* --- Aviso de Conteúdo (Discreto) --- */
+        .content-warning {
+            margin: -5rem auto 0; /* Sobe levemente sobre o hero */
+            background: var(--warning-bg);
+            border-left: 2px solid var(--warning-border);
+            padding: 1.5rem;
+            backdrop-filter: blur(5px);
+            border-radius: 0 8px 8px 0;
+            font-size: 0.9rem;
+            color: #d0d0d0;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .content-warning strong {
+            display: block;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-size: 0.75rem;
+            color: #ff6b6b;
+        }
+
+        /* --- Sobre / Introdução --- */
+        .about {
+            text-align: justify;
+        }
+
+        .about h2 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: var(--text-primary);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 1rem;
+            display: inline-block;
+        }
+
+        .about p {
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+            color: #ccc;
+        }
+
+        .highlight {
+            color: #fff;
+            font-style: italic;
+        }
+
+        /* --- Player Section --- */
+        .listen-section {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .spotify-container {
+            position: relative;
+            background: #121212;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px -10px rgba(0,0,0,0.8);
+            border: 1px solid #333;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .spotify-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 50px -10px rgba(0,0,0,0.9);
+            border-color: var(--accent-color);
+        }
+
+        .spotify-embed-wrapper {
+            padding-bottom: 200px; /* Altura aproximada do embed */
+            position: relative;
+            height: 0;
+        }
+
+        .spotify-embed-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .cta-button {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 1rem 2.5rem;
+            background: linear-gradient(135deg, #1db954, #169c46);
+            color: white;
+            font-weight: bold;
+            border-radius: 50px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+            box-shadow: 0 4px 15px rgba(29, 185, 84, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(29, 185, 84, 0.5);
+        }
+
+        /* --- Footer --- */
+        footer {
+            text-align: center;
+            padding: 3rem 1.5rem;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            font-size: 0.8rem;
+            color: #555;
+        }
+
+        footer span {
+            display: block;
+            margin-top: 0.5rem;
+            font-family: var(--font-display);
+            font-style: italic;
+            font-size: 1.2rem;
+            color: #777;
+        }
+
+        /* --- Animações --- */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {transform: translateY(0) translateX(-50%);}
+            40% {transform: translateY(-10px) translateX(-50%);}
+            60% {transform: translateY(-5px) translateX(-50%);}
+        }
+
+        /* Responsividade */
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 2rem; }
+            .content-warning { margin: 0 1rem; transform: none; border-radius: 8px; border-left-width: 4px; }
+            .spotify-embed-wrapper { padding-bottom: 280px; } /* Altura maior em mobile */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <h1>Limbo Sonoro</h1>
+        <p class="subtitle">Anatomia do Abismo</p>
+        
+        <div class="slogan">
+            “Porque alguns abismos não se superam — apenas se narram.”
+        </div>
+
+        <div class="scroll-indicator">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M7 13l5 5 5-5M7 6l5 5 5-5"/>
+            </svg>
+        </div>
+    </header>
+
+    <main>
+        <!-- Aviso de Conteúdo -->
+        <section class="content-warning">
+            <strong>🖤 Aviso de Conteúdo</strong>
+            Este podcast contém temas sensíveis como morte, colapso emocional, experiências liminares e sofrimento psíquico. O conteúdo é estritamente artístico e autobiográfico. Recomenda-se ouvir com consciência e autocuidado.
+        </section>
+
+        <!-- Sobre o Podcast -->
+        <section class="about">
+            <h2>A Jornada</h2>
+            <p>
+                Sejam muito bem-vindos ao <span class="highlight">Limbo Sonoro — Anatomia do Abismo</span>, um podcast de tom visceral conduzido por <em>Alexia Melusine</em>.
+            </p>
+            <p>
+                Este projeto não é apenas uma narração; é uma escavação. Dedicamo-nos a mergulhar em textos escritos há mais de três décadas, que funcionam como verdadeiras cápsulas de memória de uma época passada. São ruínas de um eu anterior, preservadas na tinta e agora ressuscitadas pelo som.
+            </p>
+            <p>
+                Aqui, exploramos os cantos mais escuros da mente humana, onde o silêncio é ensurdecedor e as memórias assumem formas físicas.
+            </p>
+            <p style="text-align: right; margin-top: 2rem; font-family: var(--font-display); font-size: 1.2rem; color: var(--accent-color);">
+                “Onde o som é ponte para lugares onde nunca voltamos.”
+            </p>
+        </section>
+
+        <!-- Seção de Ouvir (Spotify) -->
+        <section class="listen-section">
+            <h2>Ouça Agora</h2>
+            <p style="margin-bottom: 2rem; color: #888;">Disponível em todas as plataformas digitais.</p>
+            
+            <div class="spotify-container">
+                <div class="spotify-embed-wrapper">
+                    <!-- Incorporação oficial do Spotify -->
+                    <iframe 
+                        style="border-radius:12px" 
+                        src="https://open.spotify.com/embed/show/6ahRd7QT2wcq7ldt5CJHZW?utm_source=generator&theme=0" 
+                        width="100%" 
+                        height="352" 
+                        frameBorder="0" 
+                        allowfullscreen="" 
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+
+            <a href="https://open.spotify.com/show/6ahRd7QT2wcq7ldt5CJHZW" target="_blank" class="cta-button">
+                Abrir no Spotify
+            </a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; Limbo Sonoro. Todos os direitos reservados.</p>
+        <span>Conduzido por Alexia Melusine</span>
+    </footer>
+
+    <script>
+        // Script simples para animar elementos ao rolar a página (Fade In)
+        document.addEventListener("DOMContentLoaded", function() {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            const animatedElements = document.querySelectorAll('.about, .listen-section, .content-warning');
+            
+            animatedElements.forEach(el => {
+                el.style.opacity = 0;
+                el.style.transform = 'translateY(30px)';
+                el.style.transition = 'opacity 1s ease-out, transform 1s ease-out';
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>
