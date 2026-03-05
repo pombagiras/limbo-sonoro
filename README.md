@@ -1,33 +1,55 @@
-Alexia Melusine
-🌑 Alexia Melusine
-Desenvolvedora | Narradora do Abismo | Criadora do Limbo Sonoro
+ <!-- CABEÇALHO -->
+        <header>
+            <div class="profile-wrapper">
+                <img src="https://raw.githubusercontent.com/pombagiras/melusine/refs/heads/main/Al%C3%AA%20(3)%20(3)%20(1).png" alt="Alexia Melusine" class="profile-photo">
+            </div>
+            
+            <h1>Alexia Melusine</h1>
+            <p class="subtitle">Desenvolvedora | Narradora do Abismo</p>
 
-divider
-🖤 Sobre
-Mergulhando no código assim como mergulha nas memórias. Meu trabalho conecta a técnica do desenvolvimento à visceralidade da arte autobiográfica. Aqui você encontrará repositórios que vão desde o ativismo social até a exploração técnica de identidades digitais.
+            <p class="bio">
+                Mergulhando no código assim como mergulha nas memórias. Meu trabalho conecta a técnica do desenvolvimento à visceralidade da arte autobiográfica.
+            </p>
+        </header>
 
-"Porque alguns abismos não se superam — apenas se narram."
+        <!-- PROJETOS -->
+        <section class="projects">
+            
+            <!-- Pombagiras -->
+            <a href="https://github.com/pombagiras" target="_blank" class="project-card card-purple">
+                <h3>Pombagiras</h3>
+                <p>O núcleo da técnica e da magia. Repositório principal de desenvolvimento e experimentação.</p>
+                <span class="arrow">↗</span>
+            </a>
 
-📦 Meus Repositórios & Trabalhos
-Abaixo estão os meus principais espaços de criação e resistência.
+            <!-- Orgulho Trans -->
+            <a href="https://github.com/Orgulho-Trans" target="_blank" class="project-card card-pink">
+                <h3>Orgulho Trans</h3>
+                <p>Memória e resistência. Um espaço dedicado à preservação de histórias e lutas da comunidade.</p>
+                <span class="arrow">↗</span>
+            </a>
 
-1. Pombagiras 🕯️
-O núcleo da minha atividade técnica e criativa. Um espaço dedicado ao desenvolvimento, experimentação e ao arquivamento de projetos pessoais.
+            <!-- Alexia Luz de Ferro -->
+            <a href="https://github.com/alexialuzdeferro" target="_blank" class="project-card card-iron">
+                <h3>Luz de Ferro</h3>
+                <p>A identidade que forja o código. Explorações sobre identidade e composição digital sólida.</p>
+                <span class="arrow">↗</span>
+            </a>
 
-Repositório Pombagiras
+        </section>
 
-2. Orgulho Trans 🏳️‍⚧️
-Um projeto de memória e resistência. Dedicação à preservação de histórias, lutas e celebrações da comunidade trans. Tecnologia a serviço da existência.
+        <!-- CITAÇÃO -->
+        <div class="quote-section">
+            <blockquote>
+                “Porque alguns abismos não se superam — apenas se narram.”
+            </blockquote>
+        </div>
 
-Repositório Orgulho Trans
+    </div>
 
-3. Alexia Luz de Ferro ⚔️
-A identidade que forja o código. Explorações mais densas sobre identidade, ferro e fogo na composição digital.
+    <footer>
+        <p>LIMBO SONORO &copy; 2024</p>
+    </footer>
 
-Repositório Alexia Luz de Ferro
-
-🛠️ Tecnologias & Ferramentas
-HTML5CSS3JavaScriptGit
-"Onde o som é ponte para lugares onde nunca voltamos."
-
-© Limbo Sonoro
+</body>
+</html>
